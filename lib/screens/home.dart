@@ -106,9 +106,9 @@ class Home extends StatelessWidget {
                 ],
               ),
               trailing:  Icon(
-                Icons.arrow_right_sharp,
+                Icons.favorite,
                 size: 25,
-                color: Color.fromARGB(255, 45, 72, 109),
+                color: Color.fromARGB(255, 206, 39, 128),
               ),
               onTap: () {
                 Navigator.push(

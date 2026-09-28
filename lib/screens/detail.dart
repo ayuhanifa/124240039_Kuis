@@ -89,34 +89,59 @@ class Detail extends StatelessWidget {
                 ),
               ),
               SizedBox(height: 6),
-              // Center(
-              //   child: Text(
-              //     "Penulis: ${dest.author}",
-              //     style: TextStyle(
-              //       fontSize: 16,
-              //       fontWeight: FontWeight.w500,
-              //       color: Color(0xFF64748B),
-              //     ),
-              //   ),
-              // ),
+              Center(
+                child: Text(
+                  destination.category,
+                  style: TextStyle(
+                    fontSize: 16,
+                    fontWeight: FontWeight.w500,
+                    color: Color(0xFF64748B),
+                  ),
+                ),
+              ),
               SizedBox(height: 28),
 
               // Rating, Halaman, Tahun 
-              Row(
-                // mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                // children: [
-                //   _buildTextStat(book.rating.toString(), 'Rating'),
-                //   Container(width: 1, height: 30, color: Color(0xFFCBD5E1)), // Garis pemisah tipis
-                //   _buildTextStat(book.pages.toString(), 'Halaman'),
-                //   Container(width: 1, height: 30, color: Color(0xFFCBD5E1)), // Garis pemisah tipis
-                //   _buildTextStat(book.year.toString(), 'Tahun'),
-                // ],
+              // Row(
+              //   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              //   children: [
+              //     _buildTextStat(destination.ticketInfo.toString(), 'Tiket Info'),
+              //     Container(width: 1, height: 30, color: Color(0xFFCBD5E1)), // Garis pemisah tipis
+              //     _buildTextStat(destination.openingHours.toString(), 'Opening Hours'),
+              //     Container(width: 1, height: 30, color: Color(0xFFCBD5E1)), // Garis pemisah tipis
+              //     _buildTextStat(destination.attraction.toString(), 'Attraction'),
+              //   ],
+              // ),
+               Center(
+                child: Text(
+                  destination.ticketInfo,
+                  textAlign: TextAlign.center,
+                  style: TextStyle(
+                    fontSize: 26,
+                    fontWeight: FontWeight.w800,
+                    color: Color(0xFF0F172A),
+                    letterSpacing: -0.5,
+                  ),
+                ),
               ),
-              SizedBox(height: 32),
+              SizedBox(height: 6),
+              Center(
+                child: Text(
+                  destination.openingHours,
+                  style: TextStyle(
+                    fontSize: 16,
+                    fontWeight: FontWeight.w500,
+                    color: Color(0xFF64748B),
+                  ),
+                ),
+              ),
+              SizedBox(height: 28),
+
+              // SizedBox(height: 32),
 
               // Deskripsi buku
               Text(
-                "Sinopsis",
+                "Deskripsion",
                 style: TextStyle(
                   fontSize: 18,
                   fontWeight: FontWeight.bold,
@@ -149,6 +174,7 @@ class Detail extends StatelessWidget {
                 ),
               ),
               SizedBox(height: 24),
+              
 
               // Detail Lainnya
               Text(
@@ -160,6 +186,7 @@ class Detail extends StatelessWidget {
                 ),
               ),
               SizedBox(height: 12),
+
               Container(
                 width: double.infinity,
                 padding: EdgeInsets.all(20),
@@ -174,16 +201,19 @@ class Detail extends StatelessWidget {
                     ),
                   ],
                 ),
-                // child: Column(
-                //   children: [
-                //     _buildDetailRow("Genre", book.genre),
-                //     Divider(height: 24, color: Color(0xFFE2E8F0)),
-                //     _buildDetailRow("Penerbit", book.publisher),
-                //   ],
-                // ),
+                child: Column(
+                  children: [
+                    _buildDetailRow("attraction", destination.attraction),
+                    Divider(height: 24, color: Color(0xFFE2E8F0)),
+                    // _buildDetailRow("", book.publisher),
+                  ],
+                ),
+                
               ),
               SizedBox(height: 32), 
             ],
+
+            
           ),
         ),
       ),
